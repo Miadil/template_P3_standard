@@ -4,6 +4,10 @@ const router = express.Router()
 
 const itemControllers = require("./controllers/itemControllers")
 const charactersControllers = require("./controllers/charactersControllers")
+const spellsControllers = require("./controllers/spellsControllers")
+
+router.get("/spells", spellsControllers.pouletBrowse)
+router.get("/spellscharacter/:id", spellsControllers.readSpellsForOneCharacter)
 
 router.get("/characters", charactersControllers.browse)
 router.get("/characters/:id", charactersControllers.read)

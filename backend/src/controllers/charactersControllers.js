@@ -14,7 +14,6 @@ const browse = (req, res) => {
 
 const add = (req, res) => {
   const characters = req.body
-
   // TODO validations (length, format...)
 
   models.characters
@@ -27,6 +26,7 @@ const add = (req, res) => {
       res.sendStatus(500)
     })
 }
+
 const read = (req, res) => {
   models.characters
     .find(req.params.id)
